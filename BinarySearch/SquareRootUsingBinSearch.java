@@ -24,7 +24,7 @@ class SquareRootUsingBinSearch {
             return 1;
         int lo = 1, hi = num;
         int sqrt = 0;
-        while(lo < hi) {
+        while(lo <= hi) {
             int mid = lo + (hi-lo)/2;
             if(mid*mid <= num) {
                 lo = mid+1;
