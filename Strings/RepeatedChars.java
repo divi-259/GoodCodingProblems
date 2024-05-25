@@ -4,11 +4,14 @@ import java.util.*;
 Input1 : abcbbde
 Output1 : 2, bb - substring which can be removed and the remaining character abcde is a unique string.
 Input2 : aaabcdaa
-Output2: 7, aaabcda - all these characters has to be removed such that remaining string a will have only unique characters.*/
+Output2: 7, aaabcda - all these characters has to be removed such that remaining string a will have only unique characters.
+Question Link: https://leetcode.com/discuss/interview-question/5140227/google-interview-question/2393934
+*/
 
 class RepeatedChars {
     public static void main(String args[]) {
-        String testarr[] = {"aaabcdaa", "abcbbde", "aabbccd", "abcde", "aaaaa", "a", "aazzz", "aa"};
+        // TO-Do: Fix for the last test case in the array, ans should be 5
+        String testarr[] = {"aaabcdaa", "abcbbde", "aabbccd", "abcde", "aaaaa", "a", "aazzz", "aa","ae aab cde"};
         for(String str : testarr) {
             System.out.println("Number of chars to be removed in " + str + " is " + uniqueChars(str) );
         }
