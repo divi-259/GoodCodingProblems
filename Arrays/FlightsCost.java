@@ -18,8 +18,8 @@ import java.util.*;
 class FlightsCost {
 
     public static void main(String args[]) {
-        int d[] = {2000, 3000, 2500, 4000, 1000, 4000};
-        int r[] = {2500, 2000, 3000, 1000, 2000, 3800};
+        int d[] = {2000, 3000, 2500, 1000, 1000, 4000};
+        int r[] = {2500, 2000, 3000, 1000, 2000, 1800};
         System.out.println("Min cost = " + getMinCost(d,r));
     }
 
@@ -30,8 +30,8 @@ class FlightsCost {
             rmin[i] = Math.min(r[i], r[i+1]);
         }
         int mincost = Integer.MAX_VALUE;
-        for(int i=0; i<d.length; i++) {
-            mincost = Math.min(mincost, d[i]+rmin[i]);
+        for(int i=0; i<d.length-1; i++) {
+            mincost = Math.min(mincost, d[i]+rmin[i+1]);
         }
         return mincost;
     }
